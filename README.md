@@ -10,11 +10,11 @@ Há também cursos especializados em UI e UX Design.
 
 # CURSOS DE FRONT-END REALIZADOS
 Abaixo, confira quais cursos da Origamid já finalizei:
-- [CSS Flexbox]("https://github.com/reinaldonunes/OrigamidCursos/tree/main/css_flexbox")
+- [CSS Flexbox](https://github.com/reinaldonunes/OrigamidCursos/tree/main/css_flexbox)
 
 
 # CERTIFICADOS
-- [Certificado CSS Flexbox]("https://www.origamid.com/certificate/4a196a22/")
+- [Certificado CSS Flexbox](https://www.origamid.com/certificate/4a196a22/)
 
 
 
