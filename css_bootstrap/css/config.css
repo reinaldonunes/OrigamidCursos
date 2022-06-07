@@ -1,0 +1,28 @@
+body{
+  padding-top:75px;
+}
+.box-shadow{
+  box-shadow: 0 2px 4px 0 rgba(0,0,0,.05),
+              0 4px 8px 0 rgba(0,0,0,.05);
+}
+
+.icon-size img{
+  height:70px;
+}
+
+.bg-home-quote{
+  background:url("../img/bg-quote.jpg") no-repeat center center;
+  background-size:cover;
+}
+
+@media (max-width:768px){
+  body{ padding-top:0px; }
+  body .fixed-top{ position:relative; }
+  .bg-home-quote .display-4{
+    font-size:2rem;
+  }
+}
+
+.btn-max-width{
+  max-width:140px;
+}
