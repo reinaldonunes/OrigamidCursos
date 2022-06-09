@@ -16,7 +16,7 @@ Abaixo, confira quais cursos da Origamid já finalizei:
 
 # CERTIFICADOS
 - [Certificado CSS Flexbox](https://www.origamid.com/certificate/4a196a22/)
-- [Certificado CSS Bootstrap 4] (https://www.origamid.com/certificate/8a09b648/)
+- [Certificado CSS Bootstrap 4](https://www.origamid.com/certificate/8a09b648/)
 
 
 
