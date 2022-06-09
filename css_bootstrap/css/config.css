@@ -26,3 +26,9 @@ body{
 .btn-max-width{
   max-width:140px;
 }
+
+.list-bottom-border li{
+  padding:1rem;
+  border-bottom:1px solid rgba(0,0,0,.4);
+}
+.list-bottom-border li:last-child{ border-bottom: 0px;}

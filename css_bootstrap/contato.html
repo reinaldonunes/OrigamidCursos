@@ -30,7 +30,7 @@
               <a class="nav-link" aria-current="page" href="planos.html">Planos</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" aria-current="page" href="contato.html">Contato</a>
+              <a class="nav-link active" aria-current="page" href="contato.html">Contato</a>
             </li>
             <li class="nav-item">
               <a class="nav-link" aria-current="page" href="#" data-bs-toggle="modal" data-bs-target="#modal_login">Login</a>
@@ -43,110 +43,54 @@
       </div>
     </nav>
 
-    <section class="container-fluid">
-      <div class="row bg-dark text-white">
-        
-        <div class="col-lg-7 p-0">
-          <div id="carousel-cities" class="carousel slide" data-bs-ride="carousel">
-            <div class="carousel-indicators">
-              <button type="button" data-bs-target="#carousel-cities" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
-              <button type="button" data-bs-target="#carousel-cities" data-bs-slide-to="1" aria-label="Slide 2"></button>
-              <button type="button" data-bs-target="#carousel-cities" data-bs-slide-to="2" aria-label="Slide 3"></button>
-            </div>
-            <div class="carousel-inner">
-              <div class="carousel-item active" data-bs-interval="5000">
-                <img src="img/california.jpg" class="d-block w-100" alt="Califórnia">
-                <div class="carousel-caption"><h3 class="display-4">Califórnia</h3></div>
-              </div>
-              <div class="carousel-item" data-bs-interval="5000">
-                <img src="img/dublin.jpg" class="d-block w-100" alt="Dublin">
-                <div class="carousel-caption"><h3 class="display-4">Dublin</h3></div>
-              </div>
-              <div class="carousel-item" data-bs-interval="5000">
-                <img src="img/paris.jpg" class="d-block w-100" alt="Paris">
-                <div class="carousel-caption"><h3 class="display-4">Paris</h3></div>
-              </div>
-            </div>
-            <button class="carousel-control-prev" type="button" data-bs-target="#carousel-cities" data-bs-slide="prev">
-              <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-              <span class="visually-hidden">Anterior</span>
-            </button>
-            <button class="carousel-control-next" type="button" data-bs-target="#carousel-cities" data-bs-slide="next">
-              <span class="carousel-control-next-icon" aria-hidden="true"></span>
-              <span class="visually-hidden">Pŕoximo</span>
-            </button>
+    
+
+    <section class="container">
+      <div class="text-center my-5">
+        <span class="h6 d-block">POSSUI ALGUMA DÚVIDA?</span>
+        <h1 class="display-4 text-primary">Fale Conosco</h1>
+      </div>
+
+      <div class="row">
+        <div class="col-lg mb-5">
+         <form class="p-4 bg-light rounded box-shadow">
+           <div class="form-group mb-3">
+             <label for="name_user">Nome</label>
+             <input type="text" class="form-control" id="name_user">
+           </div>
+           <div class="form-group mb-3">
+            <label for="email_user">E-mail</label>
+            <input type="email" class="form-control" id="email_user">
           </div>
+          <div class="form-group mb-3">
+            <label for="message_user">Mensagem</label>
+            <textarea class="form-control resize-no" rows="5" id="message_user"></textarea>
+          </div>
+          <button type="submit" class="btn btn-primary">Enviar Mensagem</button>
+         </form>
         </div>
+        <div class="col-lg mb-5">
+         <h2 class="h6">NOSSO ENDEREÇO</h2>
+         <a href=""><img src="img/mapa.png" alt="Endereço da empresa" class="srrc img-fluid box-shadow rounded mb-5"></a>
 
-        <div class="col-lg-5 p-4 align-self-center">
-          <h1 class="display-4">Realize a viagem do seu sonho</h1>
-          <p class="lead">O melhor local para viajar é com a Caravan, mais de 5.000 excursões concluídas.</p>
+         <h2 class="h6">DADOS DE CONTATO</h2>
+         <ul class="list-unstyled text-secondary">
+          <li>caravan@caravan.com.br</li>
+          <li>21 99999-9999</li>
+          <li>De Seg. à Sex. das 8h às 18h</li>
+        </ul>
 
-          <form action="">
-            <div class="input-group input-group-lg">
-              <input type="text" class="form-control" placeholder="E-mail" aria-label="E-mail">
-              <button class="btn btn-primary" type="button">Inscreva-se</button>
-            </div>
-          </form>
+        <h2 class="h6">REDES SOCIAIS</h2>
+        <ul class="list-unstyled d-flex">
+          <li><a href="" class="btn btn-outline-secondary btn-sm btn-max-width me-2 mb-2">Facebook</a></li>
+          <li><a href="" class="btn btn-outline-secondary btn-sm btn-max-width me-2 mb-2">Twitter</a></li>
+          <li><a href="" class="btn btn-outline-secondary btn-sm btn-max-width me-2 mb-2">Youtube</a></li>
+        </ul>
+
+
         </div>
       </div>
-    </section>
 
-    <section class="py-5 bg-light text-center">
-      <div class="container">
-        <div class="my-5">
-          <span class="h6 d-block">TUDO DE MELHOR PARA VOCÊ</span>
-          <h2 class="display-4 text-primary">Aproveite as Vantagens</h2>
-        </div>
-
-        <div class="row">
-          <div class="col-xl-4 col-md-6">
-              <div class="d-flex justify-content-center icon-size"><img src="img/icones/passaporte.svg" alt="Passaporte"></div>
-              <h3>Documentos</h3>
-              <p>Lorem ipsum dolor sit amet consectetur adipisicing eliot.</p>
-          </div>
-
-          <div class="col-xl-4 col-md-6">
-            <div class="d-flex justify-content-center icon-size"><img src="img/icones/passagens.svg" alt="Passagens"></div>
-            <h3>Passagens</h3>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing eliot.</p>
-          </div>
-
-          <div class="col-xl-4 col-md-6">
-            <div class="d-flex justify-content-center icon-size"><img src="img/icones/translado.svg" alt="Translado"></div>
-            <h3>Translado</h3>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing eliot.</p>
-          </div>
-
-          <div class="col-xl-4 col-md-6">
-            <div class="d-flex justify-content-center icon-size"><img src="img/icones/praias.svg" alt="Praias"></div>
-            <h3>Praias</h3>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing eliot.</p>
-          </div>
-
-          <div class="col-xl-4 col-md-6">
-            <div class="d-flex justify-content-center icon-size"><img src="img/icones/bagagens.svg" alt="Bagagens"></div>
-            <h3>Bagagens</h3>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing eliot.</p>
-          </div>
-
-          <div class="col-xl-4 col-md-6">
-            <div class="d-flex justify-content-center icon-size"><img src="img/icones/turismo.svg" alt="Turismo"></div>
-            <h3>Turismo</h3>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing eliot.</p>
-          </div>
-        </div>
-
-        <a href="planos.html" class="btn btn-primary btn-lg mt-5 text-white">Comprar plano</a>
-
-    </div>
-    </section>
-
-    <section class="bg-home-quote p-md-5">
-      <blockquote class="blockquote text-center text-white p-md-5 p-3">
-        <p class="display-4"><em>"A felicidade não está na estrada que leva algum lugar. A felicidade é a própria estrada".</em></p>
-        <footer class="blockquote-footer text-white">Bob Dylan</footer>
-      </blockquote>
     </section>
 
     <section class="container">
@@ -201,11 +145,6 @@
             </div>
           </div>
         </div>
-      </div>
-
-      <div class="text-center my-4">
-        <p class="small m-1">FALE CONOSCO SE AINDA TIVER DÚVIVDAS</p>
-        <a href="contato.html" class="btn btn-primary btn-lg">Entre em contato</a>
       </div>
     </section>
 
