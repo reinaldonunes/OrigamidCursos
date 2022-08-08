@@ -16,7 +16,7 @@ Há também cursos especializados em UI e UX Design.
   </div>
 </div>
 
-<br /><br />
+<br />
 
 <div style="display:flex;flex-wrap:wrap;align-items:center">
   <div style="flex:1 1 100%">
@@ -25,14 +25,8 @@ Há também cursos especializados em UI e UX Design.
 
   </div>
   <div style="flex:1 1 100%;display:flex;flex-wrap:wrap;">
-    <a href="https://www.origamid.com/certificate/4a196a22/" target="_blank" title="Clique para ver o certificado" style="flex:1 1 100px;text-align:center;padding:16px;border:1px solid #222;border-radius:6px;background:#333;display:flex;flex-direction:column;margin:6px;">
-    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-original.svg" width="100px" style="margin:0 auto;margin-bottom:12px;" />
-    <span style="font-size:1rem;font-weight:bold;color:#fff;">CSS Flexbox</span>
-    </a>
-    <a href="https://www.origamid.com/certificate/8a09b648/" target="_blank" title="Clique para ver o certificado" style="flex:1 1 100px;text-align:center;padding:16px;border:1px solid #222;border-radius:6px;background:#333;display:flex;flex-direction:column;margin:6px;">
-    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/bootstrap/bootstrap-original.svg" width="100px" style="margin:0 auto;margin-bottom:12px;" />
-    <span style="font-size:1rem;font-weight:bold;color:#fff;">CSS Bootstrap</span>
-    </a>
+    <a href="https://www.origamid.com/certificate/4a196a22/" target="_blank" title="Clique para ver o certificado"><img src="https://img.shields.io/badge/CSS3-1572B6?style=for-the-badge&logo=css3&logoColor=white" width="150px"></a>
+    <a href="https://www.origamid.com/certificate/8a09b648/" target="_blank" title="Clique para ver o certificado"><img src="https://img.shields.io/badge/Bootstrap-563D7C?style=for-the-badge&logo=bootstrap&logoColor=white" width="240px"></a>
   </div>
 </div>
 
