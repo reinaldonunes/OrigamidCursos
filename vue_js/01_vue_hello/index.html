@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+  <html>
+    <head>
+      <title>Olá, Vue.js</title>
+    </head>
+    <body>
+      <div id="app">
+        {{ hellovue }}
+      </div>
+
+      <script src="https://unpkg.com/vue@3"></script>
+      <script> 
+        const { createApp } = Vue
+
+        createApp({
+          data(){
+            return{
+              hellovue: 'Olá Vue.js!!'
+            }
+          }
+        }).mount("#app")
+      </script>
+    </body>
+
+  </html>

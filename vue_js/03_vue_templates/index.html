@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+  <html>
+    <head>
+      <title>Vue.js - Templates e Diretivas</title>
+    </head>
+    <body>
+      <div id="app">
+        <h1>{{ titulo }}</h1>
+        <p>{{ conteudo }}</p>
+        <p>{{ lado }}</p> 
+        <p>{{ comprou ? 'Sim, comprado' : 'Não, deve comprar' }}</p>
+      </div>
+
+      <br /><br /><br />
+
+      <div id="orders">
+        <h1>{{ titulo2 }}</h1>
+        <p>Cliente Vitalício: {{ comprado }}</p>
+        <div v-if="comprado">
+          <input v-model="color" type="color" />
+          <p v-bind:style="{backgroundColor: color}">Essa é a cor: {{ color }}</p>
+        </div>
+
+      </div>
+
+      <script src="https://cdn.jsdelivr.net/npm/vue@2.6.14"></script>
+      <script> 
+        const App = new Vue({
+          el: "#app",
+          data: {
+
+            titulo: "Curso de Javascript - Template Strings",
+            conteudo: "Esse é o conteúdo",
+            lado: 5,
+            comprou: true,
+          }
+        })
+
+        const orders = new Vue({
+          el: "#orders",
+          data: {
+            titulo2 : "Curso de Javascript - Diretivas",
+            color: "#444",
+            comprado: true
+          }
+        })
+      </script>
+    </body>
+
+  </html>
