@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+  <html>
+    <head>
+      <title>Vue.js - Fetch API</title>
+    </head>
+    <body>
+      <div id="app">
+        <h1>Consulta de API Skoob</h1>
+        <button @click="puxarAcoes">Consultar</button>
+        <pre>{{acoes}}</pre>
+        
+      </div>
+
+      <script src="https://cdn.jsdelivr.net/npm/vue@2.6.14"></script>
+      <script> 
+        const vm = new Vue({
+          el: "#app",
+          data: {
+            acoes: {}
+          },
+          methods: {
+            puxarAcoes(){
+              fetch("https://www.skoob.com.br/v1/bookcase/books/3031620/shelf_id:12/")
+                .then(response => response.json())
+                .then(json => {
+                  this.acoes = json;
+                })
+            }
+          }
+        })
+      </script>
+    </body>
+
+  </html>

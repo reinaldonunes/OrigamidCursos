@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+  <html>
+    <head>
+      <title>Vue.js - V-bind</title>
+    </head>
+    <body>
+      <div id="app">
+        <a v-bind:href="link">Link Google</a> <!-- v bind modo completo -->
+        <p :class="cor">Texto</p> <!-- v bind atalho -->
+        <p :class="userTheme ? light : dark">{{userTheme}}</p>
+      </div>
+
+      <script src="https://cdn.jsdelivr.net/npm/vue@2.6.14"></script>
+      <script> 
+        const vm = new Vue({
+          el: "#app",
+          data: {
+            link: "https://www.google.com.br",
+            cor: "azul",
+            userTheme: false,
+            light: 'light-theme',
+            dark: 'dark-theme'
+          }
+        })
+
+
+        const toggleDiv = () =>{
+          let div = document.getElementById("minha-div-1");
+          div?.classList.toggle("hide");
+        }
+      </script>
+    </body>
+
+  </html>
