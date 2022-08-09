@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+  <html>
+    <head>
+      <title>Vue.js - Instâncias e Clones</title>
+    </head>
+    <body>
+      <div id="app"> {{ nomeProduto }}</div>
+
+      <div id="square">Lado do quadrado é igual a {{ lado }}<br />Perímetro do quadrado é {{ lado * 4 }}<br /> A área do quadrado é {{ lado * lado }}</div>
+
+      <script src="https://cdn.jsdelivr.net/npm/vue@2.6.14"></script>
+      <script> 
+        function VueClone(options){
+          this.options = options;
+          this.el = document.querySelector(options.el);
+          this.data = options.data;
+        }
+
+        const vmClone = new VueClone({
+          el:  '#app',
+          data: {
+            nome: 'Martelo'
+          }
+          
+        });
+
+        const vm = new Vue({
+          el: "#app",
+          data: {
+            instrumento: "Violão",
+            cor: "Vermelho"
+          },
+          computed: {
+            nomeProduto(){
+              setTimeout(() => {
+                console.log("This do timeout:", this);
+              },1000)
+
+              return this.instrumento + ' ' + this.cor;
+            }
+          }
+        });
+
+
+        const square = new Vue({
+          el: "#square",
+          data: {
+            lado: 2,
+
+          }
+        })
+      </script>
+    </body>
+
+  </html>

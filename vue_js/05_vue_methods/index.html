@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+  <html>
+    <head>
+      <title>Vue.js - Métodos</title>
+    </head>
+    <body>
+      <div id="app">
+        {{ total }}
+        <button @click="incrementar">Incrementar</button>
+        <button @click="decrementar">Incrementar</button>
+
+        <br /><br />
+
+      
+        <p>{{ instrumento }}</p>
+        <button @click="mudarNome('Violão')">Violão</button>
+        <button @click="mudarNome('Guitarra')">Guitarra</button>
+
+
+        <br /><br />
+
+      
+        <p>Produto Preço R$ {{ preco }}</p>
+       
+        <p>{{ alerta }}</p>
+        <button @click="addCupom()">Adicionar cupom</button>
+
+      </div>
+
+      <script src="https://cdn.jsdelivr.net/npm/vue@2.6.14"></script>
+      <script> 
+        const vm = new Vue({
+          el: "#app",
+          data: {
+            total: 0,
+            instrumento: "",
+            preco: 149,
+            alerta: ""
+          },
+          methods: {
+            incrementar(){
+              this.total++
+            },
+            decrementar(){
+              this.total--
+            },
+            mudarNome(instrumento){
+              this.instrumento = instrumento
+            },
+            addCupom(){
+              this.preco *= 0.9;
+              this.alertaCupom();
+            },
+            alertaCupom(){
+              this.alerta = "Cupom adicionado!"
+            }
+          }
+        })
+      </script>
+    </body>
+
+  </html>
