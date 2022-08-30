@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+  <html>
+    <head>
+      <title>Vue.js - Exercício</title>
+    </head>
+    <body>
+      <div id="app">
+        <ul>
+          <li v-for="item in cep">{{ item }}</li>
+        </ul>
+      </div>
+
+      <script src="https://cdn.jsdelivr.net/npm/vue@2.6.14"></script>
+      <script> 
+        const vm = new Vue({
+          el: "#app",
+          data: {
+            cep: {},
+            endpoint: "https://viacep.com.br/ws/89600000/json/"
+          },
+          methods: {
+            getCep(){
+              fetch(this.endpoint)
+                .then(response => response.json())
+                .then(response => {
+                  this.cep = response
+                })
+            }
+          },
+          created(){
+            this.getCep()
+          }
+        })
+      </script>
+    </body>
+  </html>

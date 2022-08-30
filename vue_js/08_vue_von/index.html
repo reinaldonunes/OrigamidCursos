@@ -5,8 +5,32 @@
     </head>
     <body>
       <div id="app">
-        <button @click="handleClick">Clique aqui</button>
+        <h1>Diretiva normal</h1>
+        <button @click="contador++">Clique aqui</button>
         {{contador}}
+
+        <br /><br />
+        <button @click="ativo = !ativo">Toggle</button>
+        <p v-if="ativo">Mostrar Texto</p>
+        {{ ativo }}
+
+
+        <h1>Diretiva modificada</h1>
+        <a href="#interno" @click.prevent="handleClick">Prevent = desabilita a ação padrão do a/button/form, etc</a>
+        <br />
+        <a href="#interno" @click.once="handleClick">Once = executa o evendo uma única vez</a>
+        <br />
+        <a href="#interno" @click.prevent.once="handleClick">Prevent Once = desabilita a ação padrão + executa uma única vez</a>
+
+        <br /><br /><br />
+        <a href="#interno" @keyup="handleClick">Keyup = quando alguma tecla for pressionada</a>
+        <br />
+        <a href="#interno" @keyup.f="handleClick">Keyup.f = neste exemplo, quando a letra F for pressionada</a>
+        <br />
+        <a href="#interno" @keyup.enter="handleClick">Keyup.enter = quando o enter for pressiondao</a>
+
+        <br /><br /><br />
+        <p @mousemove="handleMove">Mouse aqui: {{ mouse.x }} | {{ mouse.y}}</p>
       </div>
 
       <script src="https://cdn.jsdelivr.net/npm/vue@2.6.14"></script>
@@ -14,11 +38,21 @@
         const vm = new Vue({
           el: "#app",
           data: {
-            contador: 0
+            contador: 0,
+            ativo: true,
+            mouse: "",
           },
           methods: {
             handleClick(event){
+              /* se não tiver a diretiva modificada, usar o código abaixo
+                  event.prevent;
+              */
+
               console.log(event);
+            },
+
+            handleMove(event){
+              this.mouse = event;
             }
           }
         })

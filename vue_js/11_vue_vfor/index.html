@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+  <html>
+    <head>
+      <title>Vue.js - V-for</title>
+    </head>
+    <body>
+      <div id="app">
+        <div v-for="(fruit, key, index) in fruits" :key="fruit.key">{{ index }} - {{ key }} - {{ fruit.name }}</div>
+      </div>
+
+      <script src="https://cdn.jsdelivr.net/npm/vue@2.6.14"></script>
+      <script> 
+        const vm = new Vue({
+          el: "#app",
+          data: {
+            fruits: {
+              banana:{
+                name: "Banana"
+              },
+              apple:{
+                name: "Apple"
+              }
+            }
+          },
+          methods: {}
+        })
+      </script>
+    </body>
+  </html>

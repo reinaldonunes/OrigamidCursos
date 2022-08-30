@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+  <html>
+    <head>
+      <title>Vue.js - V-for</title>
+    </head>
+    <body>
+      <div id="app">
+        <ul>
+          <li v-for="car in carsFiltered" :key="car.brand">{{ car.brand }}</li>
+        </ul>
+        <button @click="removeCar">Remover</button>
+
+        <p>{{ contador }} </p>
+        <button @click="contador++">Add</button>
+      </div>
+
+      <script src="https://cdn.jsdelivr.net/npm/vue@2.6.14"></script>
+      <script> 
+        const vm = new Vue({
+          el: "#app",
+          data: {
+            cars: [
+              {
+                brand: 'VM',
+                color: 'Blue'
+              },
+              {
+                brand: 'Ford',
+                color: 'Black'
+              },
+              {
+                brand: 'Tesla',
+                color: 'Blue'
+              },
+            ],
+            contador: 0
+          },
+          methods: {
+            removeCar(){
+              this.cars.pop()
+            }
+          },
+          computed:{
+            carsFiltered(){
+              return this.cars.filter(({color}) => color === 'Blue')
+            }
+          },
+          watch:{
+            contador(){
+              console.log("Modificando...")
+            }
+          }
+        })
+      </script>
+    </body>
+  </html>

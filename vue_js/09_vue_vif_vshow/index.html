@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+  <html>
+    <head>
+      <title>Vue.js - V-if e V-show</title>
+    </head>
+    <body>
+      <div id="app">
+        <template v-if="logado === 1">
+          <p>Usuário logado 1</p>
+        </template>
+        <template v-else-if="logado === 2">
+          <p>Usuário logado 2</p>
+        </template>
+        <template v-else="logado">
+          <p>Usuário deslogado</p>
+        </template>
+
+
+
+        <div v-show="logado===1">
+          estou logado
+        </div>
+      </div>
+
+      <script src="https://cdn.jsdelivr.net/npm/vue@2.6.14"></script>
+      <script> 
+        const vm = new Vue({
+          el: "#app",
+          data: {
+            logado: 4
+          },
+          methods: {}
+        })
+      </script>
+    </body>
+  </html>
