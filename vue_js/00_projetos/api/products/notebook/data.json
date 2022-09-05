@@ -1,0 +1,21 @@
+{
+  "id": "notebook",
+  "name": "Notebook Acer",
+  "price": 2999,
+  "description": "Lorem Ipsum dolor sit amet. ",
+  "inventory": 12,
+  "img": "./api/products/notebook/notebook-foto.jpg",
+  "reviews": [
+    {
+      "user": "Fábio",
+      "stars": 5,
+      "comment": "Gostei muito do produto, atendeu às minhas espectativas."
+    },
+
+    {
+      "user": "Marcela",
+      "stars": 3,
+      "comment": "Muito bom, mas poderia ser mais barato."
+    }
+  ]
+}

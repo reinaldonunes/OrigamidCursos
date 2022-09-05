@@ -25,8 +25,9 @@ Há também cursos especializados em UI e UX Design.
 
   </div>
   <div style="flex:1 1 100%;display:flex;flex-wrap:wrap;">
-    <a href="https://www.origamid.com/certificate/4a196a22/" target="_blank" title="Clique para ver o certificado"><img src="https://img.shields.io/badge/CSS3-1572B6?style=for-the-badge&logo=css3&logoColor=white" width="150px"></a>
+    <!-- <a href="https://www.origamid.com/certificate/8a09b648/" target="_blank" title="Clique para ver o certificado"><img src="https://img.shields.io/badge/Vue.js-35495E?style=for-the-badge&logo=vue.js&logoColor=4FC08" width="174px"></a> -->
     <a href="https://www.origamid.com/certificate/8a09b648/" target="_blank" title="Clique para ver o certificado"><img src="https://img.shields.io/badge/Bootstrap-563D7C?style=for-the-badge&logo=bootstrap&logoColor=white" width="240px"></a>
+    <a href="https://www.origamid.com/certificate/4a196a22/" target="_blank" title="Clique para ver o certificado"><img src="https://img.shields.io/badge/CSS3-1572B6?style=for-the-badge&logo=css3&logoColor=white" width="150px"></a>
   </div>
 </div>
 
@@ -39,6 +40,7 @@ Há também cursos especializados em UI e UX Design.
 
 - [CSS Flexbox - Acessar](https://github.com/reinaldonunes/OrigamidCursos/tree/main/css_flexbox)
 - [Bootstrap 4 - Acessar](https://github.com/reinaldonunes/OrigamidCursos/tree/main/css_bootstrap)
+- [VueJs 2.6 - Acessar](https://github.com/reinaldonunes/OrigamidCursos/tree/main/css_vuejs)
 
   </div>
 </div>
