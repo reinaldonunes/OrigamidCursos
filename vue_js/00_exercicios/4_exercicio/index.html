@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+  <html>
+    <head>
+      <title>Vue.js - Exercício 4</title>
+    </head>
+    <body>
+      <div id="app">
+        <input type="color" v-model="btn.background" />
+        <label for="width">Width:</label>
+        <input type="text" id="width" v-model="btn.width" />
+
+        <label for="height">Height:</label>
+        <input type="text" id="height" v-model="btn.height" />
+
+
+        <label for="fontSize">Font Size:</label>
+        <input type="text" id="fontSize" v-model="btn.fontSize" />
+
+        <label for="fontSize">Font Size:</label>
+        <input type="text" id="fontSize" v-model="btn.fontSize" />
+
+
+
+        <a :style="btn" href="">Clique Aqui</a>
+        {{ btn.background }}
+      </div>
+
+      <script src="https://cdn.jsdelivr.net/npm/vue@2.6.14"></script>
+      <script> 
+        const vm = new Vue({
+          el: "#app",
+          data: {
+            btn:{
+              background: '#333',
+              width: 0,
+              height: 0,
+              fontSize: "20px"
+            }
+          }
+        })
+      </script>
+
+
+    <style>
+      label{
+        display:block;
+      }
+
+      a{
+        display:block;
+      }
+    </style>
+    </body>
+  </html>

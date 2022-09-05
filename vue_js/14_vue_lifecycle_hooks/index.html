@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+  <html>
+    <head>
+      <title>Vue.js - Lifecycle - Hooks</title>
+    </head>
+    <body>
+      <div id="app">
+        <pre v-for="item in userData.response" :key="item.id">
+          {{ item  }}
+        </pre>
+      </div>
+
+
+      <script src="https://cdn.jsdelivr.net/npm/vue@2.6.14"></script>
+      <script> 
+        const vm = new Vue({
+          el: "#app",
+          data: {
+           message: "It's a message.",
+           userData: {}
+          },
+          methods:{
+            getGitHub(){
+              fetch("https://www.skoob.com.br/v1/bookcase/books/3031620")
+                .then(response => response.json())
+                .then(response => { this.userData = JSON.parse(JSON.stringify(response)) })
+            }
+          },
+          beforeCreate(){
+            //executa antes de criar o app
+          },
+          created(){
+            // executa tudo na criação
+            this.getGitHub();
+          },
+          mounted(){
+            //executa ao montar o objeto
+          },
+          beforeUpdate(){
+            //executa algo antes de atualizar o DOM
+          },
+          updated(){
+            // executa ao já ter atualizad o DOM
+          },
+          beforeDestroyed(){
+            // executa antes de destruir o objeto do vue
+          },
+          destroyed(){
+            // executa na hora da destruição
+          }
+          
+        })
+
+      </script>
+    </body>
+  </html>

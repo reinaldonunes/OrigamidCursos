@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+  <html>
+    <head>
+      <title>Vue.js - Diretiva V-Model</title>
+    </head>
+    <body>
+      <div id="app">
+        <input type="text" v-model.trim="nome" />
+        <input type="text" v-model.lazy="nome" />
+        <input type="text" v-model.number="nome" />
+        <input type="email" :value="email" />
+        <br /><br />
+        {{ nome }} - {{ email}}
+        <br /><br />
+        Com o :value, o dado só pode vir do JS para o DOM.
+        <br />
+        Com o v-model, o dado pode vir do JS para o DOM e vice-versa.
+      </div>
+
+
+
+      <div id="vm">
+        {{ fruit }}
+        {{ isSelect }}
+        <select v-model="fruit">
+          <option value="">Selecione uma Fruta</option>
+          <option value="banana" selected="isSelect===fruit ? 'selected' : ''">Banana</option>
+          <option value="ameixa" selected="isSelect===fruit ? 'selected' : ''">Ameixa</option>
+          <option value="maca" selected="isSelect===fruit ? 'selected' : ''">Maçã</option>
+        </select>
+      </div>
+
+      <script src="https://cdn.jsdelivr.net/npm/vue@2.6.14"></script>
+      <script> 
+        const vm = new Vue({
+          el: "#app",
+          data: {
+            nome: '',
+            email: 'teste@dev.com.br'
+          }
+        })
+
+
+
+        const rd = new Vue({
+          el: "#vm",
+          data: {
+            fruit: 'banana',
+            isSelect : 'banana'
+          }
+        })
+      </script>
+    </body>
+  </html>
