@@ -3,34 +3,34 @@
     "id": "notebook",
     "name": "Notebook Acer",
     "price": 2999,
-    "img": "./techno/api/products/notebook/notebook.jpg"
+    "img": "./api/products/notebook/notebook.jpg"
   },
 
   {
     "id": "smartphone",
     "name": "Smartphone Sansung",
     "price": 1299,
-    "img": "./techno/api/products/smartphone/smartphone.jpg"
+    "img": "./api/products/smartphone/smartphone.jpg"
   },
 
   {
     "id": "tablet",
     "name": "Tablet Dell",
     "price": 899,
-    "img": "./techno/api/products/tablet/tablet.jpg"
+    "img": "./api/products/tablet/tablet.jpg"
   },
 
   {
     "id": "smartwatch",
     "name": "SmartWatch Amazon",
     "price": 4900,
-    "img": "./techno/api/products/smartwatch/smartwatch.jpg"
+    "img": "./api/products/smartwatch/smartwatch.jpg"
   },
 
   {
     "id": "speaker",
     "name": "Speaker Pioneer",
     "price": 4500,
-    "img": "./techno/api/products/speaker/speaker.jpg"
+    "img": "./api/products/speaker/speaker.jpg"
   }
 ]

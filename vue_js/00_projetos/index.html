@@ -1,21 +1,51 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
     <script src="./assets/vue.js"></script>
-    <link href="https://fonts.googleapis.com/css?family=Noto+Serif:400,400i,700" rel="stylesheet">
-    <link rel="stylesheet" href="./ssets/style.css">
+    <link
+      href="https://fonts.googleapis.com/css?family=Noto+Serif:400,400i,700"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="./assets/style.css" />
     <title>Techno</title>
   </head>
   <body>
     <div id="app">
+      <section class="modal" v-show="product">
+        <div class="modal_container">
+          <div class="modal_img">
+            <img :src="product.img" :alt="product.name" />
+          </div>
+          <div class="modal_data">
+            <span class="modal_price">{{ product.price }}</span>
+            <h2 class="modal_title">{{ product.name }}</h2>
+            <p>{{ product.description }}</p>
+            <button class="modal_btn">Adicionar Item</button>
+          </div>
+          <div class="reviews">
+            <h2 class="reviews_subtitles">Avaliações</h2>
+            <ul>
+              <li v-for="review in reviews">
+                
+              </li>
+            </ul>
+          </div>
+        </div>
+      </section>
 
 
-      {{ products }}
-
-
+      <section class="products">
+        <div class="product" v-for="item in products" @click="fetchProduct(item.id)" :key="item.id">
+          <img :src="item.img" :alt="item.name" class="product_img" />
+          <div class="product_info">
+            <span class="product_price">{{ item.price | parseCurrency }}
+            <h2 class="product_caption">{{ item.name }}</h2>
+          </div>
+        </div>
+      </section>
     </div>
     <script src="./app.js"></script>
   </body>
