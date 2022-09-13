@@ -12,7 +12,7 @@ ul {
 }
 
 body {
-  background: linear-gradient(to right, #1a1a1a 30%, #fff 30%);
+  background: linear-gradient(to right, #1a1a1a 35%, #fff 35%);
   font-family: "Noto Serif";
 }
 
@@ -26,26 +26,27 @@ body {
   justify-content: space-between;
   margin: 0 auto;
   max-width: 900px;
-  padding: 20px 0;
+  padding: 40px 0 30px 0;
+  border-bottom:2px solid rgba(0,0,0,0.2);
 }
 
 .logo {
   width: 80px;
 }
 
-.cart_menu::after {
-  content: "";
-  display: inline-block;
-  background: url("./assets/carrinho.svg") no-repeat center center;
-  width: 25px;
-  height: 25px;
-  margin-left: 10px;
-}
-
 .cart_menu {
   display: flex;
   align-items: center;
   cursor: pointer;
+}
+
+.cart_menu:after {
+  content: "";
+  display: inline-block;
+  background: url("./carrinho.svg") no-repeat center center;
+  width: 25px;
+  height: 25px;
+  margin-left: 10px;
 }
 
 .products {
@@ -79,7 +80,7 @@ body {
   color: rgba(0,0,0,.5);
 }
 
-/* MODAL 
+
 .modal::before {
   content: "";
   position: fixed;
@@ -99,7 +100,6 @@ body {
   width: 100%;
   padding: 80px;
 }
-*/
 
 .modal_container {
   background: linear-gradient(to right, transparent 250px, white 250px);
@@ -107,19 +107,21 @@ body {
   grid-gap: 50px;
   align-items: end;
   padding: 0px 50px 50px 0;
-  animation: produto .3s forwards;
+  animation: product .3s forwards;
 }
 
-@keyframes produto {
+@keyframes product {
   from {
-    transform: translateX(50px);
+    opacity: 0;
+    transform: translate3D(50px, 0, 0);
   }
   to {
-    transform: translateX(0px);
+    opacity: 1;
+    transform: translate3D(0px, 0, 0);
   }
 }
 
-.modal_fechar {
+.modal_close {
   border-radius: 50%;
   border: 2px solid black;
   width: 40px;
@@ -166,7 +168,7 @@ body {
 }
 
 .modal_btn.sold_off {
-  cursor: initial;
+  cursor: default;
   opacity: .5;
 }
 
@@ -185,16 +187,17 @@ body {
   padding-bottom: 20px;
 }
 
-.review_descricao {
+.review_comment{
+  margin:20px 0 5px 0;
   color: rgba(0,0,0,.7);
 }
 
-.review_usuario {
+.review_user {
   font-weight: bold;
   line-height: 0px;
 }
 
-.alerta {
+.alert {
   position: absolute;
   top: 20px;
   left: 0px;
@@ -204,7 +207,7 @@ body {
   display: none;
 }
 
-.alerta.ativo {
+.alert.active {
   display: block;
   animation: fadeInDown .3s forwards;
 }
@@ -220,7 +223,7 @@ body {
   }
 }
 
-.alerta_mensagem {
+.alert_message {
   background: white;
   border: 2px solid black;
   display: inline-block;
@@ -228,9 +231,9 @@ body {
   box-shadow: 0px 3px 4px rgba(0, 0, 0, 0.1), 0px 4px 10px rgba(0, 0, 0, 0.2);
 }
 
-/* CARRINHO */
+/* cart */
 
-.carrinho_modal::before {
+.cart_modal::before {
   content: "";
   position: fixed;
   top: 0px;
@@ -240,7 +243,7 @@ body {
   background: rgba(0,0,0,.5);
 }
 
-.carrinho_modal {
+.cart_modal {
   position: absolute;
   display: flex;
   flex-direction: column;
@@ -251,11 +254,11 @@ body {
   display: none;
 }
 
-.carrinho_modal.ativo {
+.cart_modal.active {
   display: block;
 }
 
-.carrinho_container {
+.cart_container {
   position: relative;
   margin: 80px auto;
   max-width: 800px;
@@ -264,37 +267,39 @@ body {
   animation: fadeInDown .3s forwards;
 }
 
-.carrinho_item {
+.cart_item {
   display: grid;
   grid-template-columns: 1fr 1fr 50px;
   border-bottom: 1px solid rgba(0, 0, 0, 0.1);
   align-items: center;
 }
 
-.carrinho_titulo {
+.cart_title {
   margin-bottom: 10px;
   border-bottom: 2px solid #000;
   padding-bottom: 20px;
 }
 
-.carrinho_remover {
+.cart_delete {
   border: none;
   font-size: 1rem;
   cursor: pointer;
 }
 
-.carrinho_preco {
+.cart_price {
   text-align: right;
+  padding-right:25px;
 }
 
-.carrinho_total {
+.cart_total {
   text-align: right;
   border-bottom: 2px solid #000;
-  padding-right: 50px;
+  font-weight:bold;
+  font-size:20px;
   padding-bottom: 20px;
 }
 
-.carrinho_fechar {
+.cart_close {
   border-radius: 50%;
   border: 2px solid black;
   width: 40px;
@@ -307,7 +312,7 @@ body {
   box-shadow: 0px 3px 4px rgba(0, 0, 0, 0.1), 0px 4px 10px rgba(0, 0, 0, 0.2);
 }
 
-.carrinho_finalizar {
+.cart_finished {
   display: block;
   margin-left: auto;
   background: #000;
@@ -323,23 +328,23 @@ body {
   #app {
     padding: 0 10px;
   }
-  .produtos {
+  .products {
     margin-top: 40px;
   }
-  .produto {
+  .product {
     flex-direction: column;
     align-items: flex-start;
     max-width: 300px;
     margin: 30px auto;
   }
-  .produto_info {
+  .product_info {
     padding: 20px;
   }
-  .produto_img {
+  .product_img {
     max-width: 100%;
     margin-right: 0px;
   }
-  .produto_titulo {
+  .product_caption {
     font-size: 1.5rem;
   }
   .modal {
@@ -368,7 +373,7 @@ body {
     grid-column: 1;
     padding: 10px;
   }
-  .carrinho_modal {
+  .cart_modal {
     padding: 10px;
   }
 }
