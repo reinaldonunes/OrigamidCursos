@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+  <html>
+    <head>
+      <title>Vue.js - Components</title>
+    </head>
+    <body>
+      <div id="app">
+        <pre>
+          <blockquote>
+            <h2>Declarando as propriedades do objeto</h2>
+            function component(string, object){
+              /* código da função */
+            }
+          
+            <h2>Registrando o componente</h2>
+            const OptionsComponent = {
+              template: `&lt;div&gt;Elemento&lt;/div&gt;`
+            }
+     
+            <h2>Instanciando o component</h2>
+            Vue.component("NomeDisplay",OptionsComponent)
+          </blockquote>
+        </pre>
+
+
+
+        <br /><br /><br />
+        <button-counter></button-counter>
+        <local-component></local-component>
+        <other-component></other-component>
+
+        <button-hello></button-hello>
+      </div>
+
+
+      <script src="https://cdn.jsdelivr.net/npm/vue@2.6.14"></script>
+      <script type="module">
+        import ButtonHello from "./components/ButtonHello.js";
+
+        // Local component //
+        const LocalComponent = {
+          name: 'Componente Local',
+          template: `<p>Componente Local</p>`
+        }
+
+        const OtherComponent = {
+          name: 'Componente Local 2',
+          template: `<p>Componente Local 2</p>`
+        }
+
+        // Global component //
+        Vue.component("ButtonCounter",{
+          data(){
+            return{
+              total: 0
+            }
+          },
+          template: `<button @click=total++>Contar: {{ total }}</button>`,
+        })
+
+        //Import components
+        Vue.component("ButtonHello", ButtonHello)
+
+
+
+        // Creating Vue
+        const vm = new Vue({
+          el: "#app",
+          components:{
+            LocalComponent,
+            OtherComponent
+          }
+        })
+      </script>
+    </body>
+  </html>
