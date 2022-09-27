@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+  <html>
+    <head>
+      <title>Vue.js - Events</title>
+    </head>
+    <body>
+      <div id="app">
+        {{ contador }}
+        <meu-botao
+        :contador="contador"
+        @update:contador="contador = $event"
+      ></meu-botao>
+      <!-- se mandar :contador.sync, ele já faz essa linha aqui automaticamente */ -->
+      </div>
+
+
+      <script src="https://cdn.jsdelivr.net/npm/vue@2.6.14"></script>
+      <script type="module">
+        const MeuBotao = {
+          name: "MeuBotao",
+          props: ["contador"],
+          data(){
+            return{
+              contadorComponent : this.contador
+            }
+          },
+          template: `<button @click=incrementar>Clique-me {{ contadorComponent }}</button>`,
+          methods: {
+            incrementar(){
+              this.contadorComponent++
+              this.$emit("update:contador", this.contadorComponent)
+            }
+          }
+         
+        }
+
+
+        const dev = new Vue({
+          el: "#app",
+          data:{
+           contador: 0,
+          },
+          components: {
+            MeuBotao
+          },
+          methods:{
+            
+            
+          }
+        })
+      </script>
+    </body>
+  </html>

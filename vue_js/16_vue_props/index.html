@@ -9,14 +9,54 @@
       </div>
 
 
+      <div id="dev">
+        <botao-contador :valor="0"></botao-contador>
+      </div>
+
+
       <script src="https://cdn.jsdelivr.net/npm/vue@2.6.14"></script>
       <script type="module">
+        const validateData = {
+          name: "BlogPost",
+          props: {
+            parameter: String, // define como string apenas
+            other: Number, // define como número apenas
+            total: [Number, String], //define como número ou string
+            color: {
+              type: String, //define o tipo do parâmetro
+              required: true // torna obrigatório o recebimento deste parâmetro
+            },
+            size:{
+              type: String, // tipo da propriedade
+              default: "Grande" // define o valor padrão se a propriedade vier vazia
+            }
+          }
+        }
+
+
+        const ItemProduct = {
+          name: "ItemProduct",
+          props: ["nameItem"],
+          template: `
+            <h2> {{ nameItem }}</h2>
+            <li>{{ Esse é o nome: {{ nameItem }} </li>
+            `
+        }
+
         const ListProducts = {
           name: "ListProducts",
-          props: ["items"],
+          props: ["items", "title"],
+          components: {
+            ItemProduct
+          },
           template: `
             <ul>
-              <li v-for='item in items' >{{ item }}</li>
+              <h1> {{ title }} </h1>
+              <item-product
+                v-for="item, index in items"
+                :key="item + index"
+                :nameItem="item"
+              >
             </ul>
           `,
         }
@@ -24,10 +64,31 @@
         const vm = new Vue({
           el: "#app",
           data: {
-            list: ["Banana","Maça","Morango","Uva"]
+            list: ["Pêra","Banana","Maça","Morango","Uva"]
           },  
           components: {
             ListProducts
+          }
+        })
+
+
+
+
+        const BotaoContador = {
+          name: "BotaoContador",
+          props: {
+            valor: Number, 
+          },
+          template: `<button @click="valor++">Esse é o total {{ valor }}</button>`
+        }
+
+        const dev = new Vue({
+          el: "#dev",
+          data: {
+            valor: 0
+          },
+          components: {
+            BotaoContador
           }
         })
       </script>

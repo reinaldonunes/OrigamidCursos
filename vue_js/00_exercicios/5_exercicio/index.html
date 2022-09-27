@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+  <html>
+    <head>
+      <title>Vue.js - Exercício 4</title>
+    </head>
+    <body>
+      <div id="app">
+        <formulario-acoes></formulario-acoes>
+      </div>
+
+      <script src="https://cdn.jsdelivr.net/npm/vue@2.6.14"></script>
+      <script type="module"> 
+        const DadosAcao = {
+          name: "DadosAcao",
+          props: ["acao"],
+          template: `
+            <ul>
+              <li>{{ acao }}</li>
+            </ul>
+          `
+        }
+        const FormularioAcoes = {
+          name: "FormularioAcoes",
+          data(){
+            return{
+              simboloAcao: '',
+              acao: '',
+            }
+          },
+          components: {
+            DadosAcao
+          },
+          template: `
+            <div>
+              <input type="text" v-model="simboloAcao" />
+              <button @click=puxarAcoes>Puxar ações</button>
+              <dados-acao></dados-acao>
+            </div>
+          `,
+          methods: {
+            puxarAcoes(){
+              fetch(`https://api.iextrading.com/1.0/stock/${this.simboloAcao}/quote`)
+                .then(r => r.json())
+                .then(r => {
+                  this.acao = r
+                })
+                .catch((error) => { console.log(`Ocorreu um erro: ${error}`) } )
+            }
+          }
+        }
+        const vm = new Vue({
+          el: "#app",
+          components: {
+            FormularioAcoes
+          }
+        })
+      </script>
+
+
+    <style>
+      label{
+        display:block;
+      }
+
+      a{
+        display:block;
+      }
+    </style>
+    </body>
+  </html>
