@@ -15,14 +15,15 @@
 <script>
 import SobreEmpresa from './components/SobreEmpresa.vue'
 import ServicosEmpresa from './components/ServicosEmpresa.vue'
-import ContatoEmpresa from './components/ContatoEmpresa.vue'
 
 export default {
   name: 'App',
   components: {
     SobreEmpresa,
     ServicosEmpresa,
-    ContatoEmpresa
+    ContatoEmpresa: function(){
+      return import("./components/ContatoEmpresa.vue");
+    }
   },
   data(){
     return{
