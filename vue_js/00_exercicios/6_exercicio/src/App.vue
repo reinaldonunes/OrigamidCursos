@@ -47,7 +47,7 @@ export default {
     ...mapGetters(["booksReaded"]) 
   },
   created(){
-    this.$store.dispatch("getAction")
+    this.$store.dispatch("Action/getAction")
   }
 
 }
