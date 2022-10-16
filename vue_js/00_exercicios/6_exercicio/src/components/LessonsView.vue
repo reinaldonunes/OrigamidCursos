@@ -6,7 +6,7 @@
           <h5>{{ aula.name }}</h5>
           <span>{{ aula.duration }}</span>
           <br />
-          <button @click="handleClick(aula)">Completar aula</button>
+          <button @click="completeLessons(aula)">Completar aula</button>
         </li>
       </ul>
     </div>
@@ -14,6 +14,8 @@
 
 
   <script>
+    import { mapActions } from 'vuex';
+
   export default {
       name: "LessonsView",
       data(){
@@ -42,7 +44,8 @@
 
         handleClick(aula){
           this.$store.dispatch("completeLesson", aula)
-        }
+        },
+        ...mapActions(["completeLessons"]),
       }
   }
   </script>
