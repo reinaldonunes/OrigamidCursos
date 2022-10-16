@@ -1,10 +1,18 @@
 <template>
-  <p>Curso</p>
+    <div>
+        <p>Curso</p>
+        <AulaApp></AulaApp>
+    </div>
 </template>
 
 <script>
+import AulaApp from '@/components/AulaApp.vue';
+
 export default {
   name: 'CursoApp',
+  components:{
+    AulaApp
+  }
 }
 </script>
 
