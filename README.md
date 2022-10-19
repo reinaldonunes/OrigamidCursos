@@ -42,7 +42,6 @@ Há também cursos especializados em UI e UX Design.
 - [CSS Flexbox - Acessar](https://github.com/reinaldonunes/OrigamidCursos/tree/main/css_flexbox)
 - [Bootstrap 4 - Acessar](https://github.com/reinaldonunes/OrigamidCursos/tree/main/css_bootstrap)
 - [Vue.js 2.6 - Acessar](https://github.com/reinaldonunes/OrigamidCursos/tree/main/vue_js)
-- [WordPress REST API - Acessar](https://github.com/reinaldonunes/OrigamidCursos/tree/main/wordpress_rest_api)
 
   </div>
 </div>
