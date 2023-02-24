@@ -1,14 +1,3 @@
-<style>
-  .badge_icon{
-    display:flex;
-    width:48px;
-    height:48px;
-    padding:0px 10px;
-    margin-left:4px;
-    border-radius:10px;
-    background:#222;
-  }
-</style>
 <div style="display:flex;flex-wrap:wrap;align-items:center">
   <div style="flex:1 1 100%">
 
