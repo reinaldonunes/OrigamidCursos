@@ -1,12 +1,11 @@
-let total: string | number = 200
-
-total = "4000"
-
-
-function isNumber(value: string | number){
-  if (typeof value === "number"){
-    return true;
+function toNumber(value: number | string){
+  if(typeof value === 'number'){
+    return value;
+  }else if(typeof value === 'string'){
+    return Number(value)
+  }else{
+    throw "value deve ser um number | string";
   }
 }
 
-console.log(isNumber(20))
+console.log(toNumber("300"))

@@ -51,4 +51,21 @@ fillData(computer)
 
 type Categories = 'design' | 'código' | 'descod'
 
-function printCategory(category:string)
+function printCategory(category: Categories){
+  if(category === 'design'){
+    console.log("Fazer layout no Figma.")
+  }
+}
+
+printCategory('design')
+
+
+///////////////////////////////////
+
+interface InterfaceProduct{
+  name: string;
+  price: number;
+  keyboard: boolean;
+}
+
+// recomenda-se utilizar o type quando precisa definir os tipos primitivos, e interface quando se trabalhará com tipagem de objetos.

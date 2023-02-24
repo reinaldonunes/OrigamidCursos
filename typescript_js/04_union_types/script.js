@@ -1,9 +1,13 @@
 "use strict";
-let total = 200;
-total = "4000";
-function isNumber(value) {
-    if (typeof value === "number") {
-        return true;
+function toNumber(value) {
+    if (typeof value === 'number') {
+        return value;
+    }
+    else if (typeof value === 'string') {
+        return Number(value);
+    }
+    else {
+        throw "value deve ser um number | string";
     }
 }
-console.log(isNumber(20));
+console.log(toNumber("300"));

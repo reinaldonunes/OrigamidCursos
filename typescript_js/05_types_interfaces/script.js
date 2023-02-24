@@ -26,3 +26,10 @@ const computer = {
     keyboard: true,
 };
 fillData(computer);
+function printCategory(category) {
+    if (category === 'design') {
+        console.log("Fazer layout no Figma.");
+    }
+}
+printCategory('design');
+// recomenda-se utilizar o type quando precisa definir os tipos primitivos, e interface quando se trabalhará com tipagem de objetos.
